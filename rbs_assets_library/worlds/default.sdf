@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<sdf version="1.9">
+  <world name="rbs_runtime_world">
+    <!-- <physics name='1ms' type='ignored'> -->
+    <!--   <dart> -->
+    <!--     <collision_detector>bullet</collision_detector> -->
+    <!--     <solver> -->
+    <!--       <solver_type>pgs</solver_type> -->
+    <!--     </solver> -->
+    <!--   </dart> -->
+    <!-- </physics> -->
+    <!-- <plugin name='ignition::gazebo::systems::Contact' filename='ignition-gazebo-contact-system'/> -->
+
+    <!--       -->
+    <!-- Scene -->
+    <!--       -->
+    <!-- <gravity>0 0 0</gravity> -->
+    <scene>
+      <ambient>1.0 1.0 1.0</ambient>
+      <grid>false</grid>
+    </scene>
+
+  </world>
+</sdf>
