@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<robot name="hole">
+
+  <link name="link">
+
+    <inertial>
+      <mass value="0.0016648981693459962" />
+      <origin xyz="8.799650934638582e-05 1.196281817716378e-05 -0.0005933401279307997" />
+      <inertia ixx="2.671631472947422e-07" ixy="-1.236770094613999e-15" ixz="-4.922427827988877e-16"
+        iyy="2.6716311324111315e-07" iyz="2.9642859872564484e-14" izz="4.922967456357726e-07" />
+    </inertial>
+
+    <visual>
+      <geometry>
+        <mesh filename="hole/hole_visual.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="hole/hole_collision_0.obj" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="hole/hole_collision_1.obj" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="hole/hole_collision_2.obj" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="hole/hole_collision_3.obj" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="hole/hole_collision_4.obj" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="hole/hole_collision_5.obj" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="hole/hole_collision_6.obj" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="hole/hole_collision_7.obj" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="hole/hole_collision_8.obj" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="hole/hole_collision_9.obj" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="hole/hole_collision_10.obj" />
+      </geometry>
+    </collision>
+  </link>
+
+</robot>

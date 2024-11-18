@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<robot name="arena">
+
+  <link name="hole">
+    <visual>
+      <geometry>
+        <mesh filename="hole/hole_visual.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="hole/hole_collision_0.obj" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="hole/hole_collision_1.obj" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="hole/hole_collision_2.obj" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="hole/hole_collision_3.obj" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="hole/hole_collision_4.obj" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="hole/hole_collision_5.obj" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="hole/hole_collision_6.obj" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="hole/hole_collision_7.obj" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="hole/hole_collision_8.obj" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="hole/hole_collision_9.obj" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="hole/hole_collision_10.obj" />
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- Объект peg -->
+  <link name="peg">
+    <visual>
+      <geometry>
+        <mesh filename="peg/peg_visual.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="peg/peg_collision_0.obj" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="peg/peg_collision_1.obj" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="peg/peg_collision_2.obj" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="peg/peg_collision_3.obj" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="peg/peg_collision_4.obj" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="peg/peg_collision_5.obj" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="peg/peg_collision_6.obj" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="peg/peg_collision_7.obj" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="peg/peg_collision_8.obj" />
+      </geometry>
+    </collision>
+  </link>
+
+</robot>
