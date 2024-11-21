@@ -1,14 +1,14 @@
 <?xml version="1.0" ?>
 <sdf version="1.6">
-  <model name="rook">
+  <model name="chess_board">
     <pose>0 0 0 0 0 0</pose>
-    <static>true</static>
+    <!-- <static>true</static> -->
     <link name="body">
       <visual name="visual">
         <geometry>
           <mesh>
             <scale>1.0 1.0 1.0</scale>
-            <uri>meshes/rook.dae</uri>
+            <uri>meshes/board.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -16,7 +16,7 @@
         <geometry>
           <mesh>
             <scale>1.0 1.0 1.0</scale>
-            <uri>meshes/rook.stl</uri>
+            <uri>meshes/board.dae</uri>
           </mesh>
         </geometry>
       </collision>

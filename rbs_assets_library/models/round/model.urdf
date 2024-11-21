@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<robot name="round">
+  <link name="body">
+    
+    <inertial>
+        <mass value="0.016490589885"/>
+        <origin xyz="-8.56621312396044e-09 0.0 -5.025360011416617e-05"/>
+        <inertia ixx="3.664510807069493e-09" ixy="-3.2311742677852644e-27" ixz="5.318511307776708e-16"
+                iyy="7.851342349454981e-10" iyz="-1.0339757656912847e-26" izz="3.664508302876007e-09"/>
+    </inertial>
+    
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="round.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="round.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

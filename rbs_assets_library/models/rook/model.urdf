@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<robot name="rook">
+  <link name="body">
+    
+    <inertial>
+        <mass value="0.017919575552458204"/>
+        <origin xyz="-1.4754794991646712e-07 -2.125125062591333e-08 0.021671259486046125"/>
+        <inertia ixx="5.056600500836535e-09" ixy="5.3428016053830754e-14" ixz="-7.426898559181594e-14"
+                iyy="5.056682781385134e-09" iyz="-1.0343398113971667e-14" izz="1.1593846153461676e-09"/>
+    </inertial>
+    
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/rook.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/rook.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

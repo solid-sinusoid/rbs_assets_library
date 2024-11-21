@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<robot name="board">
+  <link name="body">
+    
+    <inertial>
+        <mass value="0.30646344250128266"/>
+        <origin xyz="-0.0010096957329234167 7.946621791323607e-05 0.007105114227222484"/>
+        <inertia ixx="5.759688303836438e-07" ixy="-2.5617495676714675e-11" ixz="8.552103620079031e-10"
+                iyy="5.792961701025944e-07" iyz="8.836736670134397e-12" izz="1.1440465000118325e-06"/>
+    </inertial>
+    
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="board.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="Board.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

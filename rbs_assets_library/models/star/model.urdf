@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<robot name="star">
+  <link name="body">
+    
+    <inertial>
+        <mass value="0.012124350000000002"/>
+        <origin xyz="-0.0005210000000000003 0.0062499999999999995 0.0001803889"/>
+        <inertia ixx="2.640830756008978e-09" ixy="-0.0" ixz="7.875987277726582e-27"
+                iyy="4.704331147699782e-10" iyz="-3.069615554396001e-26" izz="2.640852358761e-09"/>
+    </inertial>
+    
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="star.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="star.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

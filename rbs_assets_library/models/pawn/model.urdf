@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<robot name="pawn">
+  <link name="body">
+    
+    <inertial>
+        <mass value="0.014475809843049935"/>
+        <origin xyz="5.383237349705387e-09 1.9525927112343877e-07 0.017373852614026436"/>
+        <inertia ixx="3.0406082146803736e-09" ixy="1.7831642744164087e-14" ixz="7.608850516327146e-14"
+                iyy="3.04064422665746e-09" iyz="-3.382690344846152e-14" izz="8.181026048330008e-10"/>
+    </inertial>
+    
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/pawn.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/pawn.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

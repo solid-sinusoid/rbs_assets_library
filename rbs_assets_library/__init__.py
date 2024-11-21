@@ -26,7 +26,6 @@ def get_worlds_path() -> str:
     models_dir = os.path.join(os.path.dirname(__file__))
     return models_dir + "/worlds/"
 
-
 def get_model_names() -> List[str]:
     """
     Return the names of the available robots.
@@ -74,8 +73,10 @@ def get_model_file(model_name: str) -> str:
             if file.endswith((".urdf", ".sdf")):
                 models_found.append(file)
 
-    if len(models_found) != 1:
+    if len(models_found) > 1:
         raise RuntimeError(f"Found multiple models in the same folder: {models_found}")
+    if len(models_found) == 0:
+        return ""
 
     model_abs_path = os.path.join(model_dir, models_found[0])
     return model_abs_path

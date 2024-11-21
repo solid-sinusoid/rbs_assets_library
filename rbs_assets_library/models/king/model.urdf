@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<robot name="king">
+  <link name="body">
+    
+    <inertial>
+        <mass value="0.031180768794991022"/>
+        <origin xyz="-2.3229590841679635e-06 -1.0765712402582509e-06 0.03229198609573396"/>
+        <inertia ixx="1.798771346718991e-08" ixy="-6.728823577018512e-15" ixz="-9.8269144810532e-13"
+                iyy="1.7989247059128398e-08" iyz="-6.411717116558409e-13" izz="2.0249452142250997e-09"/>
+    </inertial>
+    
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/king.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/king.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

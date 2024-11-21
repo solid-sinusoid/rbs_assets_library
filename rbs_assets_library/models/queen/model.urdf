@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<robot name="queen">
+  <link name="body">
+    
+    <inertial>
+        <mass value="0.027564438537040974"/>
+        <origin xyz="3.963079625947675e-08 -1.5756384214618276e-08 0.02840328035619667"/>
+        <inertia ixx="1.3656485960864305e-08" ixy="7.282339158631533e-13" ixz="9.901617965083436e-14"
+                iyy="1.3656756253245728e-08" iyz="-1.3551326225480808e-14" izz="1.8011581646166477e-09"/>
+    </inertial>
+    
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/queen.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/queen.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

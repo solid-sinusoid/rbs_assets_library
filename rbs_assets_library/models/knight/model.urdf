@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<robot name="knight">
+  <link name="body">
+    
+    <inertial>
+        <mass value="0.019912189144812784"/>
+        <origin xyz="7.924240025225031e-07 0.0015973480574346742 0.025116848745826096"/>
+        <inertia ixx="7.193725022125265e-09" ixy="-1.196359225895806e-13" ixz="3.761970657356031e-13"
+                iyy="7.026522950307413e-09" iyz="-4.039602630448625e-10" izz="1.202656394249633e-09"/>
+    </inertial>
+    
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/knight.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/knight.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>
