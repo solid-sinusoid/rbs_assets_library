@@ -3,6 +3,7 @@ import os
 import tempfile
 from pathlib import Path
 from typing import IO, List, Union
+import random
 
 
 def get_models_path() -> str:
@@ -26,6 +27,7 @@ def get_worlds_path() -> str:
     models_dir = os.path.join(os.path.dirname(__file__))
     return models_dir + "/worlds/"
 
+
 def get_model_names() -> List[str]:
     """
     Return the names of the available robots.
@@ -43,7 +45,9 @@ def get_model_names() -> List[str]:
 def get_world_names() -> list[str]:
     root_dir = get_worlds_path()
     files = [
-        f.split(".")[0] for f in os.listdir(root_dir) if os.path.isfile(os.path.join(root_dir, f))
+        f.split(".")[0]
+        for f in os.listdir(root_dir)
+        if os.path.isfile(os.path.join(root_dir, f))
     ]
     return [f for f in files if not f.startswith("__")]
 
@@ -95,7 +99,7 @@ def get_world_file(world_name: str) -> str:
     return world_path
 
 
-def get_model_string(model_name: str) -> str:
+def get_model_string(model_name: str, use_random_color: bool = True) -> str:
     """
     Return the string containing the selected robot model.
 
@@ -111,7 +115,30 @@ def get_model_string(model_name: str) -> str:
     with open(model_file, "r") as f:
         string = f.read()
 
+    if use_random_color:
+        string = add_random_material_to_urdf(string)
+
     return string
+
+
+def random_color():
+    """Generate random color"""
+    return [random.random(), random.random(), random.random(), 1.0]
+
+
+def add_random_material_to_urdf(urdf: str) -> str:
+    """Add random color to urdf"""
+    color = random_color()
+    material_str = f"""
+    <material name="random_material">
+        <color rgba="{color[0]} {color[1]} {color[2]} {color[3]}"/>
+    </material>
+    """
+
+    # Вставляем материал перед тегом <geometry> в <visual>
+    urdf_with_material = urdf.replace("<geometry>", material_str + "\n<geometry>")
+
+    return urdf_with_material
 
 
 def setup_environment() -> None:

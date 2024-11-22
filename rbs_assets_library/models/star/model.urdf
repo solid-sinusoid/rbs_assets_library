@@ -14,6 +14,9 @@
       <geometry>
         <mesh filename="star.dae" scale="1.0 1.0 1.0"/>
       </geometry>
+      <material name="random_material">
+        <color rgba="0.6423072320844898 0.8452313546706478 0.5190269394520893 1.0"/>
+      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
