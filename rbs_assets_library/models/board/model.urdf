@@ -1,27 +1,31 @@
 <?xml version="1.0"?>
 <robot name="board">
-  <link name="body">
-    
+
+  <gazebo>
+    <static>true</static>
+  </gazebo>
+  <link name="board_link">
+
     <inertial>
-        <mass value="0.30646344250128266"/>
-        <origin xyz="-0.0010096957329234167 7.946621791323607e-05 0.007105114227222484"/>
-        <inertia ixx="5.759688303836438e-07" ixy="-2.5617495676714675e-11" ixz="8.552103620079031e-10"
-                iyy="5.792961701025944e-07" iyz="8.836736670134397e-12" izz="1.1440465000118325e-06"/>
+      <mass value="0.30646344250128266" />
+      <origin xyz="-0.0010096957329234167 7.946621791323607e-05 0.007105114227222484" />
+      <inertia ixx="5.759688303836438e-07" ixy="-2.5617495676714675e-11" ixz="8.552103620079031e-10"
+        iyy="5.792961701025944e-07" iyz="8.836736670134397e-12" izz="1.1440465000118325e-06" />
     </inertial>
-    
+
     <visual>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="board.dae" scale="1.0 1.0 1.0"/>
+        <mesh filename="board.dae" scale="1.0 1.0 1.0" />
       </geometry>
       <material name="random_material">
-        <color rgba="0.6423072320844898 0.8452313546706478 0.5190269394520893 1.0"/>
+        <color rgba="0.6423072320844898 0.8452313546706478 0.5190269394520893 1.0" />
       </material>
     </visual>
     <collision>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="board.obj" scale="1.0 1.0 1.0"/>
+        <mesh filename="board.obj" scale="1.0 1.0 1.0" />
       </geometry>
     </collision>
   </link>

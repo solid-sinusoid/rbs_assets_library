@@ -5,6 +5,8 @@ from pathlib import Path
 from typing import IO, List, Union
 import random
 
+mesh_extensions = {"visual": [".dae"], "collision": [".stl", ".obj"]}
+
 
 def get_models_path() -> str:
     """
@@ -17,6 +19,17 @@ def get_models_path() -> str:
     return models_dir + "/models/"
 
 
+def get_textures_path() -> str:
+    """
+    Return the path where PBR textures have been installed.
+
+    Returns:
+        A string containing the path of textures.
+    """
+    models_dir = os.path.join(os.path.dirname(__file__))
+    return models_dir + "/textures/"
+
+
 def get_worlds_path() -> str:
     """
     Return the path where the worlds have been installed.
@@ -26,6 +39,54 @@ def get_worlds_path() -> str:
     """
     models_dir = os.path.join(os.path.dirname(__file__))
     return models_dir + "/worlds/"
+
+
+def get_assets_path() -> str:
+    return os.path.join(os.path.dirname(__file__))
+
+
+def get_model_meshes_info(model_name: str) -> dict:
+    model_folder_path = os.path.join(get_assets_path(), "models", model_name)
+    print(f"Model folder path: {model_folder_path}")  # Вывод пути для проверки
+
+    if not os.path.exists(model_folder_path):
+        raise FileNotFoundError(f"Path does not exist: {model_folder_path}")
+
+    if not os.path.isdir(model_folder_path):
+        raise NotADirectoryError(f"Path is not a directory: {model_folder_path}")
+
+    mesh = {"name": model_name, "visual": None, "collision": None}
+    collision_candidates = []
+
+    # Locate mesh files
+    for root, _, files in os.walk(model_folder_path):
+        print(
+            f"Walking into: {root}, files: {files}"
+        )  # Проверяем, какие файлы видит os.walk
+        for file in files:
+            file_path = os.path.join(root, file)
+
+            # Match against visual extensions
+            if any(file.endswith(ext) for ext in mesh_extensions["visual"]):
+                mesh["visual"] = file_path
+
+            # Collect collision candidates
+            if any(file.endswith(ext) for ext in mesh_extensions["collision"]):
+                collision_candidates.append((file_path, file))
+
+    # Prioritize collision meshes by extension: .stl > .obj
+    for ext in mesh_extensions["collision"]:
+        for path, filename in collision_candidates:
+            if filename.endswith(ext):
+                mesh["collision"] = path
+                break
+        if mesh["collision"]:
+            break
+
+    if not mesh["visual"] or not mesh["collision"]:
+        raise ValueError(f"Error {model_name}: visual or collision mesh not found.")
+
+    return mesh
 
 
 def get_model_names() -> List[str]:
