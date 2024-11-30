@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "rbs_assets_library"
-version = "0.1.0"
+version = "0.2.0"
 description = "Project description"
 authors = ["Bill Finger <ur.narmak@gmail.com>"]
 
