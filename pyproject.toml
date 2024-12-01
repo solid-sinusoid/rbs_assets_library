@@ -4,6 +4,12 @@ version = "0.2.0"
 description = "Project description"
 authors = ["Bill Finger <ur.narmak@gmail.com>"]
 
+[tool.poetry.dependencies]
+python = "^3.10"
+trimesh = "^3.9"
+pyrender = "^0.1.45"
+pillow = "^10.0"
+
 [build-system]
-requires = ["poetry-core>=1.0.0", "trimesh"]
+requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"

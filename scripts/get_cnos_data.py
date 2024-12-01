@@ -5,7 +5,6 @@ import trimesh
 import os
 from PIL import Image
 import os.path as osp
-from tqdm import tqdm
 import argparse
 from trimesh_utils import as_mesh
 from trimesh_utils import get_obj_diameter
