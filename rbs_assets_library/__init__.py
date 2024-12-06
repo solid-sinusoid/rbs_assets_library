@@ -30,6 +30,11 @@ def get_textures_path() -> str:
     return models_dir + "/textures/"
 
 
+def get_asm_configs_path() -> str:
+    asm_config_dir = os.path.join(os.path.dirname(__file__))
+    return asm_config_dir + "/asm_configs/"
+
+
 def get_worlds_path() -> str:
     """
     Return the path where the worlds have been installed.
@@ -88,6 +93,24 @@ def get_model_meshes_info(model_name: str) -> dict:
 
     return mesh
 
+
+def get_asm_configs_names() -> list[str]:
+    root_dir = get_asm_configs_path()
+    configs = [
+        c for c in os.listdir(root_dir) if os.path.isfile(os.path.join(root_dir, c))
+    ]
+    return [
+        os.path.splitext(c)[0] for c in configs if c.endswith(".yaml") and not c.startswith("__")
+    ]
+
+def get_asm_config(name: str) -> str:
+    root_dir = get_asm_configs_path()
+    if not name.endswith(".yaml"):
+        name += ".yaml"
+    config_path = os.path.join(root_dir, name)
+    if os.path.isfile(config_path) and name.endswith(".yaml") and not name.startswith("__"):
+        return config_path
+    raise FileNotFoundError(f"Configuration '{name}' not found in {root_dir}")
 
 def get_model_names() -> List[str]:
     """

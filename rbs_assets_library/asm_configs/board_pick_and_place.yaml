@@ -1,0 +1,104 @@
+assets_db: assets
+workspace:
+  - x: -0.200000
+    y: 0.200000
+    z: 0.00000
+  - x: -0.200000
+    y: 0.400000
+    z: 0.00000
+  - x: 0.200000
+    y: 0.400000
+    z: 0.00000
+  - x: 0.200000
+    y: 0.200000
+    z: 0.00000
+absolute_part: []
+  # - name: board_link
+  #   pose:
+  #     position:
+  #       x: 0.500000
+  #       y: 0.00000
+  #       z: 0.00000
+  #     orientation:
+  #       x: 0.00000
+  #       y: 0.00000
+  #       z: 0.00000
+  #       w: 1.00000
+relative_part: 
+  - name: circle_1mm_hole
+    relative_at: board_link
+    pose:
+      position:
+        y: -0.042723
+        x: -0.011128
+        z: 0.002209
+  - name: circle_2mm_hole
+    relative_at: board_link
+    pose:
+      position:
+        x: -0.011321
+        y: 0.000875
+        z: 0.002209
+  - name: circle_3mm_hole
+    relative_at: board_link
+    pose:
+      position:
+        y: 0.042903
+        x: -0.01064
+        z: 0.002209
+  - name: box_1mm_hole
+    relative_at: board_link
+    pose:
+      position:
+        y: -0.042987
+        x: 0.037613
+        z: 0.002209
+  - name: box_2mm_hole
+    relative_at: board_link
+    pose:
+      position:
+        y: -0.000987
+        x: 0.038113
+        z: 0.002209
+  - name: box_3mm_hole
+    relative_at: board_link
+    pose:
+      position:
+        y: 0.043013
+        x: 0.038613
+        z: 0.002209
+  - name: star_1mm_hole
+    relative_at: board_link
+    pose:
+      position:
+        x: -0.048387
+        y: 0.042987
+        z: 0.002209
+  - name: star_2mm_hole
+    relative_at: board_link
+    pose:
+      position:
+        x: -0.048387
+        y: 0.000987
+        z: 0.002209
+  - name: star_3mm_hole
+    relative_at: board_link
+    pose:
+      position:
+        x: -0.048387
+        y: -0.043013
+        z: 0.002209
+grasp_pose:
+  - name: knight_grasp
+    relative_at: knight
+    pose:
+      position:
+        x: 0.00000
+        y: 0.00000
+        z: 0.0560000
+      orientation:
+        x: 0.00000
+        y: 1.00000
+        z: 0.00000
+        w: 0.00000
+extra_poses: []
